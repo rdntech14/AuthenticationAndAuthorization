@@ -21,4 +21,15 @@ Multi-Factor Authentication (MFA) requires multiple means of authentication. One
 
 https://medium.com/@vivekmadurai/different-ways-to-authenticate-a-web-application-e8f3875c254a
 
-## Ways of Authentication
+## how to handle authentication on RESTful APIs.
+
+* Cookie-Based authentication
+* Token-Based authentication
+* Third party access(OAuth, API-token)
+* OpenId
+* SAML
+
+## * Cookie-Based authentication
+
+![alt text](tokenbasedauthe.png)
+
