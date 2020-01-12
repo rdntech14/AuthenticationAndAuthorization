@@ -29,7 +29,11 @@ https://medium.com/@vivekmadurai/different-ways-to-authenticate-a-web-applicatio
 * OpenId
 * SAML
 
-## * Cookie-Based authentication
+## Cookie-Based authentication
+
+**Cookie based authentication** has been the default method for handling user authentication for a long time. From the below diagram you can clearly see the client posts the login credential to the server, server verifies the credential and creates session id which is stored in server(state-full) and returned to client via set-cookie. On subsequent request the session id from the cookie is verified in the server and the request get processed. Upon logout session id will be cleared from both client cookie and server.
 
 ![alt text](tokenbasedauthe.png)
 
+## Token based authenticatio
+On the other hand **Token based authentication** is gaining in popularity because of the rise in single page applications(SPA) and statelessness(RESTful API’s)of the application. There are different ways to implement token based authentication, we will focussing on most commonly used JSON Web Token(JWT). On receiving the credentials from client the server validates the credentials and generates a signed JWT which contains the user information. Note, the token will never get stored in server(stateless). On subsequent request the token will be passed to server and gets verified(decoded) in the server. The token can be maintained at client side in local storage, session storage or even in cookies.
