@@ -1,5 +1,9 @@
 # Authentication and Authorization
 
+**Authentication = login + password (who you are)**
+
+**Authorization = permissions (what you are allowed to do)**
+
 ## Authentication
 Authentication is the practice of validating the identity of a registered user attempting to gain access to an application, API, microservices or any other data resource. 
 
