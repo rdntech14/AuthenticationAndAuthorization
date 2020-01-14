@@ -19,6 +19,10 @@ There are now many different authentication processes that can be used that can 
 Multi-Factor Authentication (MFA) requires multiple means of authentication. One example is logging into a website with your username and password but then you are asked to provide a one-time access code that the website sends to the user’s cell phone. The goal is to create multiple security layers to provide a higher level of assurance during the authentication step.
 
 
+## Auth
+
+The server sends back a header stating it requires authentication for a given realm. The user provides the username and password, which the browser concatenates (username + ":" + password), and base64 encodes. This encoded string is then sent using a "Authorization"-header on each request from the browser. Because the credentials are only encoded, not encrypted, this is highly insecure unless it is sent over https.
+
 https://medium.com/@vivekmadurai/different-ways-to-authenticate-a-web-application-e8f3875c254a
 
 ## how to handle authentication on RESTful APIs.
@@ -28,6 +32,8 @@ https://medium.com/@vivekmadurai/different-ways-to-authenticate-a-web-applicatio
 * Third party access(OAuth, API-token)
 * OpenId
 * SAML
+
+
 
 ## Cookie-Based authentication
 
