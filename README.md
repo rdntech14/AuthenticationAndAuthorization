@@ -27,9 +27,13 @@ https://medium.com/@vivekmadurai/different-ways-to-authenticate-a-web-applicatio
 
 ## how to handle authentication on RESTful APIs.
 
-* Cookie-Based authentication
-* Token-Based authentication
-* Third party access(OAuth, API-token)
+* Cookie-Based authentication ( Session Id/ Session based Token )
+* Token-Based authentication (JSON Web Token(JWT) / signed Token)
+* Third party access
+  * API-Key/Token - key will be send via Authorization header which will get handled at API gateway to authenticate the user.
+  * OAuth (Open Authentication ) - OAuth is a protocol that allows an application to authenticate against server as a user.
+    * OAuth 1.0
+    * OAuth 2.0
 * OpenId
 * SAML
 
@@ -47,7 +51,7 @@ On the other hand **Token based authentication** is gaining in popularity becaus
 ## Third party access
 
 API 
-1) API-Token
+1) API-Key/Token - key will be send via Authorization header which will get handled at API gateway to authenticate the user.
 2) Open Authentication ( OAuth ) : OAuth can be implemented by either OAuth 1.0 or OAuth 2.0
   2.a) OAuth 1.0
   2.b) OAuth 2.0
